@@ -1,0 +1,8 @@
+Default Authentication setup ar command list:
+
+steps:
+1:project ready kore nite hobe.
+2:Auth create kore nite hobe(composer require Laravel/ui)
+3:tarpor bootstrap create kore nite hobe(php artisan ui bootstrap --auth)
+4:npm install 
+5:npm run dev
