@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Container\Attributes\Auth;
+use Illuminate\Database\Eloquent\Model;
 use App\Models\AuthBaseModel;
-class User extends AuthBaseModel
+
+class Admin extends AuthBaseModel
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
 
