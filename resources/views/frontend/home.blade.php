@@ -57,7 +57,7 @@
             
             <h1 class="hero-title">Welcome to Our Platform</h1>
             <p class="hero-subtitle">We build awesome web applications to make your business grow faster. Let’s explore!</p>
-            <a href="{{ route('login') }}" class="btn btn-primary mt-4">Get Started</a>
+            <a href="{{ route('admin.login') }}" class="btn btn-primary mt-4">Get Started</a>
         </div>
     </div>
 </div>
