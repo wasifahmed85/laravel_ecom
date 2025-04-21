@@ -1,14 +1,14 @@
 <?php
 
+use App\Http\Traits\AuditColumnTrait;
 use App\Models\Admin;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Traits\AduitColumnTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 return new class extends Migration
 {
-    use AduitColumnTrait, SoftDeletes;
+    use SoftDeletes, AuditColumnTrait;
     /**
      * Run the migrations.
      */
@@ -26,7 +26,6 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
             $this->addAdminAuditColumns($table);
-
         });
     }
 
