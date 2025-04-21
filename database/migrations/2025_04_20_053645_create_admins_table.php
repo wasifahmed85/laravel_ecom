@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Admin;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('image')->nullable();
-            $table->tinyInteger('status')->default('user::STATUS_ACTIVE')->comment('1=active, -1=inactive , 0=panding');
+            $table->tinyInteger('status')->default(Admin::STATUS_ACTIVE)->comment(Admin::STATUS_ACTIVE . ' = Active, ' . Admin::STATUS_INACTIVE . ' = Inactive' .Admin::STATUS_PENDING . ' = Pending');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken(); 

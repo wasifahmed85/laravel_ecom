@@ -11,9 +11,10 @@ class AuthBaseModel extends Authenticatable
 {
     use HasFactory, Notifiable;
     
-    public const Status_PENDING = '0';
-    public const Status_INACTIVE = '-1';
-    public const Status_ACTIVE = '1';
+    public const STATUS_PENDING = '0';
+    public const STATUS_INACTIVE = '-1';
+    public const STATUS_ACTIVE = '1';
+
        public function creater(){
         return $this->morphTo();
     }
